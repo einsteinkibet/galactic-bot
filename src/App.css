@@ -1,42 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.botsContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap into the next row */
+  justify-content: space-between; /* Evenly distribute items with space between them */
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 50cm; /* Set a maximum width of 6 centimeters */
+  max-height: 2000cm; /* Set a height of 7 centimeters */
+  padding: 10px; /* Add some padding for spacing between the container and items */
+  box-sizing: border-box; /* Include padding in the total width/height */
+  background-color: #d6b8b8;
+}
+
+.bots {
+  flex: 1; /* Equal width for each bot in a row */
+  width: 5cm; /* Set a maximum width for each bot, considering the margin */
+  margin: 10px; /* Add some spacing between bots */
+  padding: 10px; /* Add padding for bot content */
+  text-align: center; /* Center bot content horizontally */
+  background-color: #877474;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(179, 67, 11, 0.1);
+}
+
+/* Style for the 'stats' section */
+#stats {
+  font-size: 14px;
   text-align: center;
+  display:flex
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Style for the bot image */
+.bots img {
+  max-width: 100%;
+  height: auto;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#fetchContainer{
+  background-color: bisque;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+h1{
+  text-align: center;
+  color: #877474;
+}
+
+.addedBots {
+height: 12cm;
+margin: 20px;
+border-style: solid;
+border-radius: 10px;
+margin-bottom: 1cm;
+}
+
+
+.bots p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.botsDetails {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    z-index: 1; /* Place the overlay above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .addedBots {
+    /* Add your positioning and styling rules here */
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Wrap items to the next line if there's not enough space */
+    justify-content: flex-start; /* Start from the left edge of the container */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  .addedBot {
+    /* Styling for individual enlisted bots */
+    margin: 10px; /* Add margin between the enlisted bots */
   }
+  .addedBots {
+    position: relative;
+    margin-top: 0cm;
+    /* Other styles */
+  }
+  /* Add the following styles to enable horizontal scrolling for enlisted bots */
+.enlistedBotsContainer {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  max-width: 32cm; /* Allow maximum width for the enlisted bots container */
 }
 
-.card {
-  padding: 2em;
+.enlistedBots {
+  display: flex;
+  flex-direction: row; /* Display enlisted bots in a row */
 }
 
-.read-the-docs {
-  color: #888;
-}
+  
