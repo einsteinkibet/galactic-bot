@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 # galactic-web--app
 # galactic-bot
 # galactic-bot
+# galactic-bot
